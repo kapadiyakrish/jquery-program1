@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Jquery CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#p1").click(function(){
+                $("#pmain").slideDown("slow");
+            });
+            $("#click").click(function(){
+                $("#box4").slideUp("slow" , function(){
+                    $("#box3").slideUp("slow" , function(){
+                        $("#box2").slideUp("slow" , function(){
+                            $("#box1").slideUp("slow");
+                        })
+                    }); 
+                });
+            });
+        });
+        
+    </script>
+    <style>
+        #pmain{
+        display: none;
+        background-color: black;
+        color: white;
+      }
+        #box1{
+            background-color: blueviolet;
+            width: 60px;
+            height: 100px;
+            margin-left: 20px;
+        }
+        #box2{
+            background-color: rgb(26, 255, 91);
+            width: 60px;
+            height: 120px;
+            margin-left: 20px;
+        }
+        #box3{
+            background-color: rgb(255, 14, 14);
+            width: 60px;
+            height: 140px;
+            margin-left: 20px;
+        }
+        #box4{
+            background-color: rgb(255, 15, 223);
+            width: 60px;
+            height: 160px;
+            margin-left: 20px;
+        }
+    </style>
+    <title>
+        slideUp and slideDown 
+    </title>
+    
+</head>
+<body>
+    <p>5th of August. The favourite day of entire life. <br> Do you want to know why that day is my favourite ? <br> click <p id="p1"> READ MORE</p></p>
+    <p id="pmain">Because that thing came to meet me after almost 1 month. Only i know that how i spent my that month. I know that there were my fault but i wanted to confess in front of him. May be the world think wrong but i don't care. I know the truth. We talked almost 30 minutes but that 30 minutes just remove my all darkside which i got in that past 30 days. I decided that now i'll never quarrel with him again, If i'll get some offensive then i'll just talk with him face to face. I'll never make decision to block him. We were best friend and we will always be BESTFRIEND.
+    </p>
+    <hr>
+    <hr>
+    <b>Now, Example of Slide Up</b>
+    <br>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <div id="box4"></div>
+    
+    <button type="button" id="click" class="btn btn-outline-dark">Click here</button>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
